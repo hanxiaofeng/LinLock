@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    tools:context=".ui.ac.LockScreenActivity">
+
+
+    <com.davemorrissey.labs.subscaleview.SubsamplingScaleImageView
+        android:id="@+id/iv_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+    <com.linheimx.app.linlock.ui.custom.LRelativeLayout
+        android:id="@+id/rl_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/wall5">
+
+        <com.linheimx.app.linlock.ui.custom.TimeView
+            android:id="@+id/tv_time"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_alignTop="@+id/tv_date"
+            android:layout_toStartOf="@+id/shimmer_tv"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="40sp" />
+
+        <com.linheimx.app.linlock.ui.custom.DateView
+            android:id="@+id/tv_date"
+            android:layout_width="60dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="36dp"
+            android:layout_marginTop="39dp"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="15sp" />
+
+
+        <com.romainpiel.shimmer.ShimmerTextView
+            android:id="@+id/shimmer_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="30dp"
+            android:text=">>> 滑动解锁"
+            android:textColor="#dca7aaad"
+            android:textSize="20sp" />
+
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="250dp"
+            android:layout_height="220dp"
+            android:layout_above="@+id/relativeLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="37dp"
+            android:background="#6216415d"
+            android:fillViewport="true">
+
+
+            <TextView
+                android:id="@+id/tv_joke"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="test"
+                android:textColor="#facedded"
+                android:textSize="19sp" />
+
+
+        </ScrollView>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/shimmer_tv"
+            android:layout_alignEnd="@+id/scrollView"
+            android:layout_alignStart="@+id/scrollView"
+            android:layout_marginBottom="75dp">
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/btn_share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="37dp"
+                android:layout_toEndOf="@+id/btn_next"
+                android:padding="15dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                ripple:fb_borderColor="#7ed862"
+                ripple:fb_borderWidth="2dp"
+                ripple:fb_focusColor="#ffa8f192"
+                ripple:fb_fontIconSize="15sp"
+                ripple:fb_ghost="true"
+                ripple:fb_iconPosition="right"
+                ripple:fb_radius="20dp"
+                ripple:fb_text="分  享"
+                ripple:fb_textColor="#ffa8f192" />
+
+            <mehdi.sakout.fancybuttons.FancyButton
+                android:id="@+id/btn_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="31dp"
+                android:padding="15dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                ripple:fb_borderColor="#7ed862"
+                ripple:fb_borderWidth="2dp"
+                ripple:fb_focusColor="#ffa8f192"
+                ripple:fb_fontIconSize="15sp"
+                ripple:fb_ghost="true"
+                ripple:fb_iconPosition="right"
+                ripple:fb_radius="20dp"
+                ripple:fb_text="下一个"
+                ripple:fb_textColor="#ffa8f192" />
+
+        </RelativeLayout>
+
+
+    </com.linheimx.app.linlock.ui.custom.LRelativeLayout>
+
+</RelativeLayout>

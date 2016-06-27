@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.yalantis.phoenix.PullToRefreshView
+        android:id="@+id/pull_to_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:scrollbars="vertical"
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.yalantis.phoenix.PullToRefreshView>
+
+    <include
+        android:id="@+id/footerView"
+        layout="@layout/footer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom" />
+
+    <include
+        android:id="@+id/emptyView"
+        layout="@layout/empty_layout" />
+
+
+</FrameLayout>
